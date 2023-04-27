@@ -1,0 +1,155 @@
+:root {
+  --font-lexend: 'Lexend Deca', sans-serif;
+  --font-big-shoulders: 'Big Shoulders Display', cursive;
+
+  /* Colors */
+
+  --prim-bright-orange: hsl(31, 77%, 52%);
+  --prim-dark-cyan: hsl(184, 100%, 22%);
+  --prim-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neu-trans-white: hsla(0, 0%, 100%, 0.75);
+  --neu-very-gray: hsl(0, 0%, 95%);
+}
+
+/*
+
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-lexend);
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+}
+
+main .card {
+  padding: 3.2em;
+}
+
+.sedans {
+  background-color: var(--prim-bright-orange);
+  border-radius: 0.8em 0 0 0.8em
+}
+
+.suvs {
+  background-color: var(--prim-dark-cyan);
+}
+
+.luxury {
+  background-color: var(--prim-very-dark-cyan);
+  border-radius: 0 0.8em 0.8em 0;
+}
+
+main .card img {
+  margin: 0 0 2em 0;
+}
+
+main .card h2 {
+  font-family: var(--font-big-shoulders);
+  margin: 0 0 0.8em 0;
+  color: var(--neu-very-gray);
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+main .card p {
+  color: var(--neu-trans-white);
+  font-size: 0.9em;
+  margin: 0 0 6em 0;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 100px;
+}
+
+button {
+  padding: 0.9em 2em;
+  border-radius: 2em;
+  border: none;
+  font-size: 1em;
+  font-family: var(--font-lexend);
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: var(--neu-very-gray);
+}
+
+.sedan-btn {
+  color: var(--prim-bright-orange);
+}
+
+.sedan-btn:hover {
+  color: var(--neu-very-gray);
+  border: 2px solid var(--neu-very-gray);
+  background-color: var(--prim-bright-orange);
+}
+
+.suv-btn {
+  color: var(--prim-dark-cyan);
+}
+
+.suv-btn:hover {
+  color: var(--neu-very-gray);
+  border: 2px solid var(--neu-very-gray);
+  background-color: var(--prim-dark-cyan);
+}
+
+.luxury-btn {
+  color: var(--prim-very-dark-cyan);
+}
+
+.luxury-btn:hover {
+  color: var(--neu-very-gray);
+  border: 2px solid var(--neu-very-gray);
+  background-color: var(--prim-very-dark-cyan);
+}
+
+@media (max-width: 950px) {
+
+  body {
+    height: initial;
+    padding: 1.5em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  main .card p {
+    margin: 0 0 2em 0;
+  }
+
+  .sedans {
+    background-color: var(--prim-bright-orange);
+    border-radius: 0.8em 0.8em 0 0
+  }
+
+  .luxury {
+    background-color: var(--prim-very-dark-cyan);
+    border-radius: 0 0 0.8em 0.8em;
+  }
+  
+}
