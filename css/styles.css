@@ -32,16 +32,16 @@ Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-lexend);
+  background-color: var(--neu-very-gray);
 }
 
 main {
   max-width: 1000px;
-  width: 100%;
   display: flex;
 }
 
